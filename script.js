@@ -1,11 +1,3 @@
-/*
-Calc has number, operator, and another number.
-Set global variables for each of the above 
-1. Function called operate
-    takes in an operator and 2 numbers
-    sets the variables to the ones passed in by parameter
-*/
-
 let numberOne = 0;
 let operator = "+";
 let numberTwo = 0;
@@ -16,7 +8,7 @@ const display = document.querySelector(".display");
 
 const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
-    if (button.className != "equal" && button.className != "clear"){
+    if (button.className != "equal" && button.className != "clear" && button.className != "name"){
         button.addEventListener("click", () =>{
             if (calculated == true){
                 displayValue = "";
@@ -34,6 +26,8 @@ clearButton.addEventListener("click", () => {
     display.innerHTML = "";
 })
 
+const rickRoll = document.querySelector(".name");
+rickRoll.addEventListener("click", () => window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")) 
 const equalButton = document.querySelector(".equal");
 equalButton.addEventListener("click", () => {
     console.log(displayValue);
